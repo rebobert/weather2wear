@@ -1,0 +1,617 @@
+{
+  "accessoriesHead": 
+  [
+    {
+    "name":"Woolen Toque", 
+    "minTemp": "-35",
+    "maxTemp": "5",
+    "minPrecip": "0",
+    "maxPrecip":"2",
+    "maxDewpoint":"5",
+    "maxWind": "75",
+    "material": [ "Wool" ]
+    },
+    {
+    "name":"Cotton Toque", 
+    "minTemp": "0",
+    "maxTemp": "10",
+    "minPrecip": "0",
+    "maxPrecip":"2",
+    "maxDewpoint":"10",
+    "maxWind": "50",
+    "material": [ "Cotton" ]
+    },
+    {
+      "name":"Cap", 
+      "minTemp": "-10",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "30",
+      "material":  [ "Polyester" ]
+    },
+    {
+      "name":"Bucket Hat", 
+      "minTemp": "20",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "30",
+      "material":  [ "Cotton" ]
+    },
+    {
+      "name": "Headband Athletic",
+      "minTemp": "0",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "21",
+      "maxWind": "50",
+      "material": [ "Polyester" ]
+     },
+     {
+      "name": "Headband",
+      "minTemp": "-15",
+      "maxTemp": "5",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "50",
+      "material": [ "Knitted" ]
+     },
+     {
+      "name": "Ear Muff",
+      "minTemp": "-35",
+      "maxTemp": "0",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Knitted" ]
+     }
+  ],
+
+  "accessoriesHands": 
+  [
+    {
+      "name": "Snow Gloves",
+      "minTemp": "-30",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip":"2",
+      "maxDewpoint":"10",
+      "maxWind": "60",
+      "material": [ "nylon" ]
+    },
+    {
+      "name": "Gloves",
+      "minTemp": "-5",
+      "maxTemp": "5",
+      "minPrecip": "0",
+      "maxPrecip":"2",
+      "maxDewpoint":"16",
+      "maxWind": "45",
+      "material": [ "Cotton" ]
+    }
+  ],
+
+  "accessoriesNeck":
+  [
+    {
+      "name": "Woolen Scarf",
+      "minTemp": "-20",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "70",
+      "material": [ "Wool" ]
+    },
+    {
+      "name": "Cotton Scarf",
+      "minTemp": "0",
+      "maxTemp": "10",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "40",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Neck Gaiter",
+      "minTemp": "-35",
+      "maxTemp": "0",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "60",
+      "material": [ "Polyester" ]
+    }
+  ],
+
+  "accessoriesFeet": 
+  [
+    {
+      "name": "Crew Socks",
+      "minTemp": "-10",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip":"4",
+      "maxDewpoint":"16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Ankle Socks",
+      "minTemp": "5",
+      "maxTemp": "40",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Snow Socks",
+      "minTemp": "-35",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip": "8",
+      "maxDewpoint": "10",
+      "maxWind": "75",
+      "material": [ "Wool" ]
+    },
+    {
+      "name": "Heated Socks",
+      "minTemp": "-40",
+      "maxTemp": "-10",
+      "minPrecip": "0",
+      "maxPrecip": "10",
+      "maxDewpoint": "10",
+      "maxWind": "85",
+      "material":  [ "Insulation" ]
+    }
+  ],
+
+  "tops": 
+  [
+    {
+      "name": "Plaid Shirt",
+      "minTemp": "-15",
+      "maxTemp": "20",
+      "minPrecip": "0",
+      "maxPrecip":"4",
+      "maxDewpoint":"16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Sleeveless Vest",
+      "minTemp": "15",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "21",
+      "maxWind": "45",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Cotton Tee Shirt",
+      "minTemp": "-25",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "8",
+      "maxDewpoint": "21",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Tee Shirt",
+      "minTemp": "-25",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "8",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Polyester" ]
+    },
+    {
+      "name": "Polo Tee Shirt",
+      "minTemp": "-25",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "8",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Long Sleeve Tee Shirt",
+      "minTemp": "5",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip": "4",
+      "maxDewpoint": "16",
+      "maxWind": "40",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Thermal Top",
+      "minTemp": "-40",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip": "10",
+      "maxDewpoint": "10",
+      "maxWind": "80",
+      "material": [ "Wool" ]
+    }
+  ],
+
+  "jackets": 
+  [
+    {
+      "name": "Fur Jacket",
+      "minTemp": "-15",
+      "maxTemp": "0",
+      "minPrecip": "0",
+      "maxPrecip":"2",
+      "maxDewpoint":"10",
+      "maxWind": "45",
+      "material": [ "Fur" ]
+    },
+    {
+      "name": "Parka Jacket",
+      "minTemp": "-40",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "80",
+      "material": [ "SyntheticInsulation" ]
+    },
+    {
+      "name": "Softshell Jacket",
+      "minTemp": "-5",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Polyester" ]
+    },
+    {
+      "name": "Fleece Jacket",
+      "minTemp": "-10",
+      "maxTemp": "5",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "60",
+      "material": [ "Fleece" ]
+    },
+    {
+      "name": "Windbreaker Jacket",
+      "minTemp": "5",
+      "maxTemp": "20",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Polyester" ]
+    },
+    {
+      "name": "Puffer Jacket",
+      "minTemp": "-25",
+      "maxTemp": "0",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "70",
+      "material":  [ "Polyester" ]
+    },
+    {
+      "name": "Bomber Jacket",
+      "minTemp": "-5",
+      "maxTemp": "10",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Polyester" ]
+    },
+    {
+      "name": "Denim Jacket",
+      "minTemp": "0",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Denim" ]
+    },
+    {
+      "name": "Denim Fur Jacket",
+      "minTemp": "-5",
+      "maxTemp": "5",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Denim" ]
+    },
+    {
+      "name": "Varsity Jacket",
+      "minTemp": "5",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Raincoat",
+      "minTemp": "5",
+      "maxTemp": "30",
+      "minPrecip": "2",
+      "maxPrecip": "10",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Polyester" ]
+    },
+    {
+      "name": "Fur Overcoat",
+      "minTemp": "-35",
+      "maxTemp": "-10",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "70",
+      "material": [ "Fur" ]
+    }
+  ],
+
+  "hoodies/sweaters":
+  [
+    {
+      "name": "Pull Over Hoodie",
+      "minTemp": "-35",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip":"2",
+      "maxDewpoint":"16",
+      "maxWind": "70",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Sweatshirt",
+      "minTemp": "-15",
+      "maxTemp": "22",
+      "minPrecip": "0",
+      "maxPrecip":"2",
+      "maxDewpoint":"16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Turtleneck Sweater",
+      "minTemp": "-10",
+      "maxTemp": "5",
+      "minPrecip": "0",
+      "maxPrecip":"2",
+      "maxDewpoint":"10",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Woolen Sweater",
+      "minTemp": "-30",
+      "maxTemp": "5",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Wool" ]
+    },
+    {
+      "name": "Cardigan",
+      "minTemp": "-5",
+      "maxTemp": "15",
+      "minPrecip": "0",
+      "maxPrecip": "4",
+      "maxDewpoint": "16",
+      "maxWind": "50",
+      "material": [ "Cotton" ]
+    }
+  ],
+
+  "bottoms": 
+  [
+    {
+      "name": "Chinos Pants",
+      "minTemp": "-5",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip":"4",
+      "maxDewpoint":"16",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Shorts",
+      "minTemp": "15",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "4",
+      "maxDewpoint": "21",
+      "maxWind": "40",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Bermuda Shorts",
+      "minTemp": "10",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "4",
+      "maxDewpoint": "16",
+      "maxWind": "40",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Jeans",
+      "minTemp": "-30",
+      "maxTemp": "30",
+      "minPrecip": "0",
+      "maxPrecip": "6",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Denim" ]
+    },
+    {
+      "name": "Cargo Pants",
+      "minTemp": "-10",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "6",
+      "maxDewpoint": "10",
+      "maxWind": "60",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Joggers Pants",
+      "minTemp": "5",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "6",
+      "maxDewpoint": "16",
+      "maxWind": "40",
+      "material": [ "Cotton" ]
+    },
+    {
+      "name": "Linen Pants",
+      "minTemp": "15",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "6",
+      "maxDewpoint": "10",
+      "maxWind": "40",
+      "material": [ "Linen" ]
+    },
+    {
+      "name": "Snow Pants",
+      "minTemp": "-40",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip": "8",
+      "maxDewpoint": "10",
+      "maxWind": "70",
+      "material": [ "SyntheticInsulation" ]
+    },
+    {
+      "name": "Thermal Bottom",
+      "minTemp": "-45",
+      "maxTemp": "-5",
+      "minPrecip": "0",
+      "maxPrecip": "8",
+      "maxDewpoint": "10",
+      "maxWind": "60",
+      "material": [ "Wool" ]
+    }
+  ],
+
+  "shoes": 
+  [
+    {
+      "name":"Snow Boots",
+      "minTemp": "-40",
+      "maxTemp": "0",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "60",
+      "material": [ "Nylon" ]
+    },
+    {
+      "name": "Running Shoes",
+      "minTemp": "-5",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "21",
+      "maxWind": "70",
+      "material": [ "Nylon Mesh" ]
+    },
+    {
+      "name": "Canvas Shoes",
+      "minTemp": "-5",
+      "maxTemp": "30",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "21",
+      "maxWind": "60",
+      "material": [ "Hemp" ]
+    },
+    {
+      "name": "Espadrille Sandals",
+      "minTemp": "20",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "10",
+      "maxWind": "40",
+      "material": [ "Jute" ]
+    },
+    {
+      "name": "Formal Shoes",
+      "minTemp": "0",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "50",
+      "material": [ "Leather" ]
+    },
+    {
+      "name":"Rainboots",
+      "minTemp": "0",
+      "maxTemp": "35",
+      "minPrecip": "2",
+      "maxPrecip": "10",
+      "maxDewpoint": "21",
+      "maxWind": "60",
+      "material": [ "Rubber" ]
+    },
+    {
+      "name": "Chelsea Boots",
+      "minTemp": "-5",
+      "maxTemp": "25",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Leather" ]
+    },
+    {
+      "name": "Sandals",
+      "minTemp": "20",
+      "maxTemp": "40",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Rubber" ]
+    },
+    {
+      "name": "Deck Shoes",
+      "minTemp": "10",
+      "maxTemp": "35",
+      "minPrecip": "0",
+      "maxPrecip": "2",
+      "maxDewpoint": "16",
+      "maxWind": "60",
+      "material": [ "Canvas" ]
+    }
+  ]
+}

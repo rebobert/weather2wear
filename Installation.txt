@@ -1,0 +1,16 @@
+StreamLit Setup In Visual Studio Code
+
+#In VSC Open Folder Weather-2wear-Streamlit Directory
+
+#Open Terminal Run in environment 
+python -m venv capstone
+
+#Activate Environment scripts
+.\capstone\Scripts\activate
+
+
+#Install required streamlit and framework using requirements.txt
+pip install -r .\requirements.txt
+
+#Run Streamlit
+streamlit run .\weather-flask-app.py
