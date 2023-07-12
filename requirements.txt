@@ -1,8 +1,0 @@
-streamlit
-requests
-datetime
-pytz
-geopy
-streamlit_lottie
-streamlit_option_menu
-timezonefinder
