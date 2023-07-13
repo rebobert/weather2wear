@@ -6,7 +6,7 @@
     "minTemp": "-35",
     "maxTemp": "5",
     "minPrecip": "0",
-    "maxPrecip":"2",
+    "maxPrecip":"3",
     "maxDewpoint":"5",
     "maxWind": "75",
     "material": [ "Wool" ]
@@ -16,7 +16,7 @@
     "minTemp": "0",
     "maxTemp": "10",
     "minPrecip": "0",
-    "maxPrecip":"2",
+    "maxPrecip":"3",
     "maxDewpoint":"10",
     "maxWind": "50",
     "material": [ "Cotton" ]
@@ -80,7 +80,7 @@
       "minTemp": "-30",
       "maxTemp": "-5",
       "minPrecip": "0",
-      "maxPrecip":"2",
+      "maxPrecip":"3",
       "maxDewpoint":"10",
       "maxWind": "60",
       "material": [ "nylon" ]
@@ -90,7 +90,7 @@
       "minTemp": "-5",
       "maxTemp": "5",
       "minPrecip": "0",
-      "maxPrecip":"2",
+      "maxPrecip":"3",
       "maxDewpoint":"16",
       "maxWind": "45",
       "material": [ "Cotton" ]
@@ -256,7 +256,7 @@
       "minTemp": "-15",
       "maxTemp": "0",
       "minPrecip": "0",
-      "maxPrecip":"2",
+      "maxPrecip":"3",
       "maxDewpoint":"10",
       "maxWind": "45",
       "material": [ "Fur" ]
@@ -380,7 +380,7 @@
       "minTemp": "-35",
       "maxTemp": "15",
       "minPrecip": "0",
-      "maxPrecip":"2",
+      "maxPrecip":"3",
       "maxDewpoint":"16",
       "maxWind": "70",
       "material": [ "Cotton" ]
@@ -390,7 +390,7 @@
       "minTemp": "-15",
       "maxTemp": "22",
       "minPrecip": "0",
-      "maxPrecip":"2",
+      "maxPrecip":"3",
       "maxDewpoint":"16",
       "maxWind": "60",
       "material": [ "Cotton" ]
@@ -400,7 +400,7 @@
       "minTemp": "-10",
       "maxTemp": "5",
       "minPrecip": "0",
-      "maxPrecip":"2",
+      "maxPrecip":"3",
       "maxDewpoint":"10",
       "maxWind": "60",
       "material": [ "Cotton" ]
