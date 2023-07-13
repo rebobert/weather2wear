@@ -26,7 +26,7 @@
       "minTemp": "-10",
       "maxTemp": "25",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "30",
       "material":  [ "Polyester" ]
@@ -36,7 +36,7 @@
       "minTemp": "20",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "30",
       "material":  [ "Cotton" ]
@@ -46,7 +46,7 @@
       "minTemp": "0",
       "maxTemp": "15",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "21",
       "maxWind": "50",
       "material": [ "Polyester" ]
@@ -56,7 +56,7 @@
       "minTemp": "-15",
       "maxTemp": "5",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "50",
       "material": [ "Knitted" ]
@@ -66,7 +66,7 @@
       "minTemp": "-35",
       "maxTemp": "0",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Knitted" ]
@@ -104,7 +104,7 @@
       "minTemp": "-20",
       "maxTemp": "-5",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "70",
       "material": [ "Wool" ]
@@ -114,7 +114,7 @@
       "minTemp": "0",
       "maxTemp": "10",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "40",
       "material": [ "Cotton" ]
@@ -124,7 +124,7 @@
       "minTemp": "-35",
       "maxTemp": "0",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "60",
       "material": [ "Polyester" ]
@@ -148,7 +148,7 @@
       "minTemp": "5",
       "maxTemp": "40",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Cotton" ]
@@ -192,7 +192,7 @@
       "minTemp": "25",
       "maxTemp": "45",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "21",
       "maxWind": "45",
       "material": [ "Cotton" ]
@@ -266,7 +266,7 @@
       "minTemp": "-40",
       "maxTemp": "-5",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "80",
       "material": [ "SyntheticInsulation" ]
@@ -276,7 +276,7 @@
       "minTemp": "-5",
       "maxTemp": "15",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Polyester" ]
@@ -286,7 +286,7 @@
       "minTemp": "-10",
       "maxTemp": "5",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "60",
       "material": [ "Fleece" ]
@@ -296,7 +296,7 @@
       "minTemp": "5",
       "maxTemp": "20",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Polyester" ]
@@ -306,7 +306,7 @@
       "minTemp": "-25",
       "maxTemp": "0",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "70",
       "material":  [ "Polyester" ]
@@ -316,7 +316,7 @@
       "minTemp": "-5",
       "maxTemp": "10",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Polyester" ]
@@ -326,7 +326,7 @@
       "minTemp": "0",
       "maxTemp": "15",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Denim" ]
@@ -336,7 +336,7 @@
       "minTemp": "-5",
       "maxTemp": "5",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Denim" ]
@@ -346,7 +346,7 @@
       "minTemp": "5",
       "maxTemp": "15",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Cotton" ]
@@ -366,7 +366,7 @@
       "minTemp": "-35",
       "maxTemp": "-10",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "70",
       "material": [ "Fur" ]
@@ -410,7 +410,7 @@
       "minTemp": "-30",
       "maxTemp": "5",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Wool" ]
@@ -528,7 +528,7 @@
       "minTemp": "-40",
       "maxTemp": "0",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "10",
       "maxWind": "60",
       "material": [ "Nylon" ]
@@ -538,7 +538,7 @@
       "minTemp": "-5",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "40",
       "maxWind": "70",
       "material": [ "Nylon Mesh" ]
@@ -548,7 +548,7 @@
       "minTemp": "-5",
       "maxTemp": "30",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "21",
       "maxWind": "60",
       "material": [ "Hemp" ]
@@ -558,7 +558,7 @@
       "minTemp": "20",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "30",
       "maxWind": "40",
       "material": [ "Jute" ]
@@ -568,7 +568,7 @@
       "minTemp": "0",
       "maxTemp": "25",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "50",
       "material": [ "Leather" ]
@@ -588,7 +588,7 @@
       "minTemp": "-5",
       "maxTemp": "25",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Leather" ]
@@ -598,7 +598,7 @@
       "minTemp": "20",
       "maxTemp": "40",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "40",
       "maxWind": "60",
       "material": [ "Rubber" ]
@@ -608,7 +608,7 @@
       "minTemp": "10",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "3",
       "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Canvas" ]
