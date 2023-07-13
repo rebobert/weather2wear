@@ -71,21 +71,8 @@ def main():
                                           hourlyPrecipList, hourlyPrecipIndex)
           itemLists.append(itemCategoryList)
 
-      if tempDifference != 0:
-        st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Temperature Difference</h1>", unsafe_allow_html=True)
-        st.write("Average temperature for past 30 days in", pastCity, "is", 
-              str(round(pastCityAvgTemp, 1)) + u"\u2103")
-        st.write("Average temperature for past 30 days in", currentCity, "is",     
-              str(round(currentCityAvgTemp, 1)) + u"\u2103")
         
-        # Print temperature difference over past month
-        # negative value if the current city is colder, 
-        # positive value if the current city is warmer
-        if currentCityAvgTemp > pastCityAvgTemp:
-          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees warmer than", pastCity, "over the past month.")
-        else:
-          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees colder than", pastCity, "over the past month.")
-      
+        
       # once all clothing items have been reduced, find best and print
       findBestItem(itemCategoryList, avgTemp)
 
@@ -249,6 +236,20 @@ def weatherCalculation(currentCity, pastCity):
     # positive value if the current city is warmer
     tempDifference = currentCityAvgTemp - pastCityAvgTemp
     
+    if tempDifference != 0:
+        st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Temperature Difference</h1>", unsafe_allow_html=True)
+        st.write("Average temperature for past 30 days in", pastCity, "is", 
+              str(round(pastCityAvgTemp, 1)) + u"\u2103")
+        st.write("Average temperature for past 30 days in", currentCity, "is",     
+              str(round(currentCityAvgTemp, 1)) + u"\u2103")
+    # Print temperature difference over past month
+        # negative value if the current city is colder, 
+        # positive value if the current city is warmer
+    if currentCityAvgTemp > pastCityAvgTemp:
+          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees warmer than", pastCity, "over the past month.")
+    else:
+          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees colder than", pastCity, "over the past month.")
+      
     return tempDifference
 
 def getAvgTemp(hourlyWeather, currentIndex):
