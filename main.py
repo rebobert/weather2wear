@@ -70,8 +70,38 @@ def main():
           itemCategoryList = getItemPrecip(itemCategoryList,
                                           hourlyPrecipList, hourlyPrecipIndex)
           itemLists.append(itemCategoryList)
-      # once all clothing items have been reduced, 
+
+      if tempDifference != 0:
+        st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Temperatrue difference over a month.</h1>", unsafe_allow_html=True)
+        st.write("Average temperature for past 30 days in", pastCity, "is", 
+              str(round(pastCityAvgTemp, 1)) + u"\u2103")
+        st.write("Average temperature for past 30 days in", currentCity, "is",     
+              str(round(currentCityAvgTemp, 1)) + u"\u2103")
+        
+        # Print temperature difference over past month
+        # negative value if the current city is colder, 
+        # positive value if the current city is warmer
+        if currentCityAvgTemp > pastCityAvgTemp:
+          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees warmer than", pastCity, "over the past month.")
+        else:
+          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees colder than", pastCity, "over the past month.")
+      
+      # once all clothing items have been reduced, find best and print
       findBestItem(itemCategoryList, avgTemp)
+
+      st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Weather</h1>", unsafe_allow_html=True)
+      
+      st.write("Current time in", currentCity, "is", currentTime)
+      st.write("\nHighest Temperature:", str(maxTemp) + u"\u2103" + "  at", str(maxTempIndex) + ":00")
+      # Print valuable data for user for the whole day. 
+      st.write('Average Temperature:', str(round(avgTemp, 1)) + u"\u2103")
+      st.write('Average \'Feels Like\':', str(round(avgWindchill, 1)) + u"\u2103")
+      st.write('Average Windspeed:', str(round(avgWind, 1)) + 'km/h')
+      st.write('Average Dewpoint:', str(round(avgDewpoint, 1)) + u"\u2103" '\n')
+      # check if the precipitation will be less than 1cm 
+      # and probability will be less than 10%
+      if dailyValues['precip'] < 1 and dailyValues['precipprob'] < 20:
+          st.write("\nThere is not predicted to be any precipitation today\n")
     else:
       st.warning('Please enter your city name')
     
@@ -112,8 +142,6 @@ def getTime(hourlyWeather, currentCity):
   timezone_str = tf.timezone_at(lng=longitude, lat=latitude)
   timezone = pytz.timezone(timezone_str)
   currentTime = datetime.now(timezone).strftime("%H:%M:%S")
-  st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Here is the current weather.</h1>", unsafe_allow_html=True)
-  st.write("Current time is", currentTime)
   for hour in hourlyWeather:
     if hour['datetime'][0:2] == currentTime[0:2]:
       currentIndex = hourlyWeather.index(hour)
@@ -129,10 +157,6 @@ def getMinMaxTemp(dailyValues, hourlyWeather, currentIndex):
     if float(hour['temp']) > maxTemp:
       maxTemp = hour['temp']
       maxTempIndex = hourlyWeather.index(hour)
-  st.write("\nThe warmest of the day is", str(maxTemp) + u"\u2103" + "  at", 
-        str(maxTempIndex) + ":00")
-  # Print valuable data for user for the whole day. 
-  st.write("Accounting for wind chill, it will feel like", str(dailyValues['feelslikemax']) + u"\u2103" + ".")
   return(maxTemp, maxTempIndex)
 
 
@@ -248,29 +272,18 @@ def getAvgTemp(hourlyWeather, currentIndex):
         avgTemp += hour['temp'] / (24-currentIndex)
     for hour in hourlyWeather[currentIndex:]:
         avgWindchill += hour['feelslike'] / (24-currentIndex)
-
-    st.write('Average temperature for rest of the day is', 
-          str(round(avgTemp, 1)) + u"\u2103")
-    st.write('Average windchill for rest of the day is', 
-          str(round(avgWindchill, 1)) + u"\u2103")
     return avgTemp, avgWindchill
 
 def getAvgWind(hourlyWeather, currentIndex):
     avgWind = 0
     for hour in hourlyWeather[currentIndex:]:
         avgWind += hour['windspeed'] / (24 - currentIndex)
-
-    st.write('Average windspeed for rest of the day is',
-          str(round(avgWind, 1)) + 'km/h')
     return avgWind
 
 def getAvgDewpoint(hourlyWeather, currentIndex):
     avgDewpoint = 0
     for hour in hourlyWeather[currentIndex:]:
         avgDewpoint += hour['dew'] / (24 - currentIndex)
-
-    st.write('Average dewpoint for rest of the day is',
-          str(round(avgDewpoint, 1)) + u"\u2103" '\n')
     return avgDewpoint
   
 # Get precipitation values from API and provide them in a list. 
@@ -278,7 +291,6 @@ def getPrecip(currentIndex, dailyValues, hourlyWeather):
     # check if the precipitation will be less than 1cm 
     # and probability will be less than 10%
     if dailyValues['precip'] < 1 and dailyValues['precipprob'] < 20:
-        st.write("\nThere is not predicted to be any precipitation today\n")
         return [0], [0]
     # code only runs if above code does not apply.
     precipType = dailyValues['preciptype']
