@@ -24,7 +24,7 @@
     {
       "name":"Cap :billed_cap:", 
       "minTemp": "-10",
-      "maxTemp": "25",
+      "maxTemp": "40",
       "minPrecip": "0",
       "maxPrecip": "2",
       "maxDewpoint": "16",
@@ -34,7 +34,7 @@
     {
       "name":"Bucket Hat :billed_cap:", 
       "minTemp": "20",
-      "maxTemp": "35",
+      "maxTemp": "40",
       "minPrecip": "0",
       "maxPrecip": "2",
       "maxDewpoint": "16",
@@ -44,7 +44,7 @@
     {
       "name": "Headband Athletic",
       "minTemp": "0",
-      "maxTemp": "15",
+      "maxTemp": "22",
       "minPrecip": "0",
       "maxPrecip": "2",
       "maxDewpoint": "21",
@@ -63,7 +63,7 @@
      },
      {
       "name": "Ear Muff",
-      "minTemp": "-35",
+      "minTemp": "-40",
       "maxTemp": "0",
       "minPrecip": "0",
       "maxPrecip": "2",
@@ -77,8 +77,8 @@
   [
     {
       "name": "Snow Gloves",
-      "minTemp": "-30",
-      "maxTemp": "-5",
+      "minTemp": "-40",
+      "maxTemp": "-10",
       "minPrecip": "0",
       "maxPrecip":"2",
       "maxDewpoint":"10",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Gloves",
-      "minTemp": "-5",
+      "minTemp": "-10",
       "maxTemp": "5",
       "minPrecip": "0",
       "maxPrecip":"2",
@@ -101,7 +101,7 @@
   [
     {
       "name": "Woolen Scarf",
-      "minTemp": "-20",
+      "minTemp": "-40",
       "maxTemp": "-5",
       "minPrecip": "0",
       "maxPrecip": "2",
@@ -111,7 +111,7 @@
     },
     {
       "name": "Cotton Scarf",
-      "minTemp": "0",
+      "minTemp": "-10",
       "maxTemp": "10",
       "minPrecip": "0",
       "maxPrecip": "2",
@@ -121,7 +121,7 @@
     },
     {
       "name": "Neck Gaiter",
-      "minTemp": "-35",
+      "minTemp": "-40",
       "maxTemp": "0",
       "minPrecip": "0",
       "maxPrecip": "2",
@@ -154,7 +154,7 @@
       "material": [ "Cotton" ]
     },
     {
-      "name": "Snow Socks",
+      "name": "Wool Socks",
       "minTemp": "-35",
       "maxTemp": "-5",
       "minPrecip": "0",
@@ -162,16 +162,6 @@
       "maxDewpoint": "10",
       "maxWind": "75",
       "material": [ "Wool" ]
-    },
-    {
-      "name": "Heated Socks",
-      "minTemp": "-40",
-      "maxTemp": "-10",
-      "minPrecip": "0",
-      "maxPrecip": "10",
-      "maxDewpoint": "10",
-      "maxWind": "85",
-      "material":  [ "Insulation" ]
     }
   ],
 
@@ -188,7 +178,7 @@
       "material": [ "Cotton" ]
     },
     {
-      "name": "Sleeveless Vest",
+      "name": "Sleeveless Shirt",
       "minTemp": "15",
       "maxTemp": "35",
       "minPrecip": "0",
@@ -200,7 +190,7 @@
     {
       "name": "Cotton Tee Shirt",
       "minTemp": "-25",
-      "maxTemp": "35",
+      "maxTemp": "40",
       "minPrecip": "0",
       "maxPrecip": "8",
       "maxDewpoint": "21",
@@ -210,7 +200,7 @@
     {
       "name": "Tee Shirt",
       "minTemp": "-25",
-      "maxTemp": "35",
+      "maxTemp": "40",
       "minPrecip": "0",
       "maxPrecip": "8",
       "maxDewpoint": "16",
@@ -313,8 +303,8 @@
     },
     {
       "name": "Bomber Jacket",
-      "minTemp": "-5",
-      "maxTemp": "10",
+      "minTemp": "-10",
+      "maxTemp": "15",
       "minPrecip": "0",
       "maxPrecip": "2",
       "maxDewpoint": "16",
@@ -332,19 +322,9 @@
       "material": [ "Denim" ]
     },
     {
-      "name": "Denim Fur Jacket",
-      "minTemp": "-5",
-      "maxTemp": "5",
-      "minPrecip": "0",
-      "maxPrecip": "2",
-      "maxDewpoint": "16",
-      "maxWind": "60",
-      "material": [ "Denim" ]
-    },
-    {
       "name": "Varsity Jacket",
       "minTemp": "5",
-      "maxTemp": "15",
+      "maxTemp": "17",
       "minPrecip": "0",
       "maxPrecip": "2",
       "maxDewpoint": "16",
@@ -353,7 +333,7 @@
     },
     {
       "name": "Raincoat",
-      "minTemp": "5",
+      "minTemp": "0",
       "maxTemp": "30",
       "minPrecip": "2",
       "maxPrecip": "10",
@@ -398,7 +378,7 @@
     {
       "name": "Turtleneck Sweater",
       "minTemp": "-10",
-      "maxTemp": "5",
+      "maxTemp": "15",
       "minPrecip": "0",
       "maxPrecip":"2",
       "maxDewpoint":"10",
@@ -408,7 +388,7 @@
     {
       "name": "Woolen Sweater",
       "minTemp": "-30",
-      "maxTemp": "5",
+      "maxTemp": "15",
       "minPrecip": "0",
       "maxPrecip": "2",
       "maxDewpoint": "16",
@@ -434,7 +414,7 @@
       "minTemp": "-5",
       "maxTemp": "25",
       "minPrecip": "0",
-      "maxPrecip":"4",
+      "maxPrecip":"6",
       "maxDewpoint":"16",
       "maxWind": "60",
       "material": [ "Cotton" ]
@@ -442,9 +422,9 @@
     {
       "name": "Shorts",
       "minTemp": "15",
-      "maxTemp": "35",
+      "maxTemp": "40",
       "minPrecip": "0",
-      "maxPrecip": "4",
+      "maxPrecip": "6",
       "maxDewpoint": "21",
       "maxWind": "40",
       "material": [ "Cotton" ]
@@ -454,7 +434,7 @@
       "minTemp": "10",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "4",
+      "maxPrecip": "6",
       "maxDewpoint": "16",
       "maxWind": "40",
       "material": [ "Cotton" ]
@@ -472,7 +452,7 @@
     {
       "name": "Cargo Pants",
       "minTemp": "-10",
-      "maxTemp": "25",
+      "maxTemp": "20",
       "minPrecip": "0",
       "maxPrecip": "6",
       "maxDewpoint": "10",
@@ -538,7 +518,7 @@
       "minTemp": "-5",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "2",
+      "maxPrecip": "34",
       "maxDewpoint": "21",
       "maxWind": "70",
       "material": [ "Nylon Mesh" ]
