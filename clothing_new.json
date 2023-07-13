@@ -440,22 +440,22 @@
       "material": [ "Cotton" ]
     },
     {
-      "name": "Shorts",
+      "name": "Athletic Shorts",
       "minTemp": "15",
       "maxTemp": "35",
       "minPrecip": "0",
       "maxPrecip": "4",
       "maxDewpoint": "40",
       "maxWind": "40",
-      "material": [ "Cotton" ]
+      "material": [ "Polyester" ]
     },
     {
-      "name": "Bermuda Shorts",
+      "name": "Casual Shorts",
       "minTemp": "25",
       "maxTemp": "45",
       "minPrecip": "0",
       "maxPrecip": "4",
-      "maxDewpoint": "40",
+      "maxDewpoint": "20",
       "maxWind": "40",
       "material": [ "Cotton" ]
     },
@@ -539,7 +539,7 @@
       "maxTemp": "35",
       "minPrecip": "0",
       "maxPrecip": "2",
-      "maxDewpoint": "25",
+      "maxDewpoint": "40",
       "maxWind": "70",
       "material": [ "Nylon Mesh" ]
     },
@@ -579,7 +579,7 @@
       "maxTemp": "35",
       "minPrecip": "2",
       "maxPrecip": "10",
-      "maxDewpoint": "21",
+      "maxDewpoint": "40",
       "maxWind": "60",
       "material": [ "Rubber" ]
     },
