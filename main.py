@@ -183,30 +183,17 @@ def userPreference():
     """
     st.write(text_input, unsafe_allow_html=True)
     
-    currentCity = st.text_input("Which city are you in?", placeholder='Hit enter to apply')
+    currentCity = st.text_input("Enter City", placeholder='Hit enter to apply')
     pastCity = None
 
     if currentCity:
-      yesNo = st.radio(f"(Optional) Are you visiting {currentCity} from another country?", ('No', 'Yes'))
+      yesNo = st.radio(f"(Optional) Are you travelling from another city?", ('No', 'Yes'))
       if yesNo == 'No':
         #if user is in city they've lived in, continue. 
         return currentCity, currentCity
       elif yesNo == 'Yes':
         #if user is in different climate, ask which country. 
-          pastCountry = st.text_input("Which country are you visiting from?", placeholder='Hit enter to apply')
-          #check if country exists. 
-          if pastCountry:
-            past = False
-            for country in countryCityData:
-              if pastCountry == country["country"]:
-                pastCity = country["city"]
-                past = True
-                break
-              else:
-                continue
-            # If users past country cannot be found, request they try again
-            if not past:
-              st.warning("\nCheck your spelling and try again")
+          pastCity = st.text_input("Enter Previous City", placeholder='Hit enter to apply')
           return currentCity, pastCity
     return None, None
 
