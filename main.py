@@ -226,11 +226,6 @@ def weatherCalculation(currentCity, pastCity):
         temp += int(day['feelslike'])
         n += 1
     currentCityAvgTemp = temp / n
-    
-    st.write("Average temperature for", pastCity, "is", 
-          str(round(pastCityAvgTemp, 1)) + u"\u2103")
-    st.write("Average temperature for", currentCity, "is",     
-          str(round(currentCityAvgTemp, 1)) + u"\u2103")
     # check if it's warmer or colder here, assign temp difference
     # negative value if the current city is colder, 
     # positive value if the current city is warmer
