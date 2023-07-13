@@ -72,7 +72,7 @@ def main():
           itemLists.append(itemCategoryList)
 
       if tempDifference != 0:
-        st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Temperatrue difference over a month.</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Temperature Difference</h1>", unsafe_allow_html=True)
         st.write("Average temperature for past 30 days in", pastCity, "is", 
               str(round(pastCityAvgTemp, 1)) + u"\u2103")
         st.write("Average temperature for past 30 days in", currentCity, "is",     
@@ -363,7 +363,7 @@ def findBestItem(itemList, avgTemp):
   if itemLists[4] == [] and itemLists[7] == []:
       st.warning("The application currently does not support extreme weather conditions")
       return
-  st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Here are some clothing recommendations for you today.</h1>", unsafe_allow_html=True)
+  st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Recommendations</h1>", unsafe_allow_html=True)
   for itemList in itemLists:
         bestItemTemp = 100
         bestItem = {}
