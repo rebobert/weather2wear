@@ -5,7 +5,4 @@ pytz
 streamlit-lottie
 streamlit-option-menu
 geopy
-os
-sys
-base64
 timezonefinder
