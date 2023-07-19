@@ -358,7 +358,8 @@ def findBestItem(itemList, avgTemp):
         # check if item is none value, if not, print to user. 
         bestItemName = bestItem.get('name')
         if not bestItemName == None:
-            itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={bestItemName}&sclient=products-cc'
+            itemNameURL = bestItemName.replace(" ", "+")
+            itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={itemNameURL}&sclient=products-cc'
             st.markdown(f'''<a href={itemURL}><button style="background-color:GreenYellow;">Stackoverflow</button></a>''',unsafe_allow_html=True)
       
 #Import the clothing item json file into the main.py
