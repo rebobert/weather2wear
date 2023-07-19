@@ -358,7 +358,7 @@ def findBestItem(itemList, avgTemp):
         # check if item is none value, if not, print to user. 
         bestItemName = bestItem.get('name')
         if not bestItemName == None:
-            itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={BestItemName}&sclient=products-cc'
+            itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={bestItemName}&sclient=products-cc'
             st.write("[Item Link](%s)" % itemURL)  
             st.markdown("[Item Link](%s)" % itemURL)
       
