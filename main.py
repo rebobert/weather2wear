@@ -1,4 +1,4 @@
-t
+
 #www.visualcrossing.com
 
 # import all necessary modules
