@@ -13,7 +13,7 @@
     },
     {
     "name":"Cotton Toque", 
-    "minTemp": "0",
+    "minTemp": "-15",
     "maxTemp": "10",
     "minPrecip": "0",
     "maxPrecip":"3",
@@ -22,18 +22,18 @@
     "material": [ "Cotton" ]
     },
     {
-      "name":"Cap", 
-      "minTemp": "-10",
-      "maxTemp": "25",
+      "name":"Ball Cap", 
+      "minTemp": "15",
+      "maxTemp": "35",
       "minPrecip": "0",
       "maxPrecip": "3",
-      "maxDewpoint": "16",
+      "maxDewpoint": "30",
       "maxWind": "30",
       "material":  [ "Polyester" ]
     },
     {
       "name":"Bucket Hat", 
-      "minTemp": "20",
+      "minTemp": "10",
       "maxTemp": "35",
       "minPrecip": "0",
       "maxPrecip": "3",
@@ -52,7 +52,7 @@
       "material": [ "Polyester" ]
      },
      {
-      "name": "Headband",
+      "name": "Winter Headband",
       "minTemp": "-15",
       "maxTemp": "5",
       "minPrecip": "0",
