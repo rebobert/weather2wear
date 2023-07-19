@@ -10,7 +10,6 @@ flask
 google.auth.transport.requests
 google.oauth2
 google_auth_oauthlib.flow
-pip._vendor
 os
 sys
 base64
