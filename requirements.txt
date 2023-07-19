@@ -5,11 +5,6 @@ pytz
 streamlit-lottie
 streamlit-option-menu
 geopy
-pathlib
-flask
-google.auth.transport.requests
-google.oauth2
-google_auth_oauthlib.flow
 os
 sys
 base64
