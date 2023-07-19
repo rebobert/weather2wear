@@ -360,7 +360,11 @@ def findBestItem(itemList, avgTemp):
         if not bestItemName == None:
             itemNameURL = bestItemName.replace(" ", "+")
             itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={itemNameURL}&sclient=products-cc'
-            st.markdown(f'''<a href={itemURL}><button style="background-color:GreenYellow;">Stackoverflow</button></a>''',unsafe_allow_html=True)
+            st.markdown(
+            f'''
+            <a href={itemURL}><button style="background-color:White;">Stackoverflow</button></a>
+            ''',
+            unsafe_allow_html=True)
       
 #Import the clothing item json file into the main.py
 def openFile():
