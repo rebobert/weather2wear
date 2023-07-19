@@ -1,4 +1,4 @@
-
+t
 #www.visualcrossing.com
 
 # import all necessary modules
@@ -362,7 +362,7 @@ def findBestItem(itemList, avgTemp):
             itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={itemNameURL}&sclient=products-cc'
             st.markdown(
             f'''
-            <a href="{itemURL}" title="{bestItemName}"><button style="background-color:White;">Stackoverflow</button></a>
+            <a href="{itemURL}" title="{bestItemName}"><button style="background-color:White;">{BestItemName}</button></a>
             ''',
             unsafe_allow_html=True)
       
