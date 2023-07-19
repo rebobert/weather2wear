@@ -6,3 +6,7 @@ streamlit-lottie
 streamlit-option-menu
 geopy
 timezonefinder
+google.oauth2
+google_auth_oauthlib.flow
+google.auth.transport.requests
+flask
