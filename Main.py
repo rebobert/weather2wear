@@ -7,7 +7,6 @@ import requests
 import json
 import datetime
 import pytz
-import os, sys
 import base64
 from datetime import timedelta, datetime
 from streamlit_lottie import st_lottie
@@ -19,6 +18,19 @@ from streamlit_option_menu import option_menu
 # declare variables
 itemLists = []
 tempDifference = 0
+
+
+def get_base64_of_bin_file(bin_file):
+  with open(bin_file, 'rb') as f:
+      data = f.read()
+  return base64.b64encode(data).decode()
+
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("style/textStyle.css")
 
 # add background image to main page
 def background(image_file):
@@ -70,38 +82,99 @@ def main():
           itemCategoryList = getItemPrecip(itemCategoryList,
                                           hourlyPrecipList, hourlyPrecipIndex)
           itemLists.append(itemCategoryList)
-
-        
-        
-      # once all clothing items have been reduced, find best and print
-      findBestItem(itemCategoryList, avgTemp)
-
-      st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Weather</h1>", unsafe_allow_html=True)
+      # once all clothing items have been reduced, 
+      findBestItem(itemLists, avgTemp)
+      #write title
+      st.write('')
+      st.markdown("<div class='text-container'><span class='text'>Today's Weather</span></div>", unsafe_allow_html=True)
+    
+      font_size = "40px"
+      custom_style = """
+      <style>
+          h1 {
+              margin: 0;
+              padding: 0;
+          }
+      </style>
+      """
+      st.markdown(custom_style, unsafe_allow_html=True)
       
-      st.write("Current time in", currentCity, "is", currentTime)
-      st.write("\nHighest Temperature:", str(maxTemp) + u"\u2103" + "  at", str(maxTempIndex) + ":00")
-      # Print valuable data for user for the whole day. 
-      st.write('Average Temperature:', str(round(avgTemp, 1)) + u"\u2103")
-      st.write('Average \'Feels Like\':', str(round(avgWindchill, 1)) + u"\u2103")
-      st.write('Average Windspeed:', str(round(avgWind, 1)) + 'km/h')
-      st.write('Average Dewpoint:', str(round(avgDewpoint, 1)) + u"\u2103" '\n')
-      # check if the precipitation will be less than 1cm 
-      # and probability will be less than 10%
-      if dailyValues['precip'] < 1 and dailyValues['precipprob'] < 20:
-          st.write("\nThere is not predicted to be any precipitation today\n")
-    else:
-      st.warning('Please enter your city name')
+      st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Current Time</h1>", unsafe_allow_html=True)
+      html_str = f"""
+      <span style="font-size: {font_size};">{currentTime}</span>
+      """
+      st.markdown(html_str, unsafe_allow_html=True)
+
+      # Print minmax data
+      max_temp = str(maxTemp) + u"\u2103" + "  at " + str(maxTempIndex) + ":00"
+      max_windchill = str(dailyValues['feelslikemax']) + u"\u2103" + "  at " + str(maxTempIndex) + ":00"
+    
+      left, right = st.columns(2)
+    
+      with left:
+          st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Max Temperature</h1>", unsafe_allow_html=True)
+          html_str = f"""
+          <span style="font-size: {font_size};">{max_temp}</span>
+          """
+          st.markdown(html_str, unsafe_allow_html=True)
+    
+      with right:
+          st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Max 'Feels Like'</h1>", unsafe_allow_html=True)
+          html_str = f"""
+          <span style="font-size: {font_size};">{max_windchill}</span>
+          """
+          st.markdown(html_str, unsafe_allow_html=True)
+      #print avg temp and feels like
+      avg_temp = str(round(avgTemp, 1)) + u"\u2103"
+      avg_windchill = str(round(avgWindchill, 1)) + u"\u2103"
+  
+      with left:
+          st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Temperature</h1>", unsafe_allow_html=True)
+          html_str = f"""
+          <span style="font-size: {font_size};">{avg_temp}</span>
+          """
+          st.markdown(html_str, unsafe_allow_html=True)
+  
+      with right:
+          st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>'Average Feels Like'</h1>", unsafe_allow_html=True)
+          html_str = f"""
+          <span style="font-size: {font_size};">{avg_windchill}</span>
+          """
+          st.markdown(html_str, unsafe_allow_html=True)
+      #print wind
+      age_wind = str(round(avgWind, 1)) + 'km/h'
+
+      st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Windspeed</h1>", unsafe_allow_html=True)
+      html_str = f"""
+      <span style="font-size: {font_size};">{age_wind}</span>
+      """
+      st.markdown(html_str, unsafe_allow_html=True)
+
+      #print dewpoint
+      age_dewpoint = str(round(avgDewpoint, 1)) + u"\u2103"
+      st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Dewpoint</h1>", unsafe_allow_html=True)
+      html_str = f"""
+      <span style="font-size: {font_size};">{age_dewpoint}</span>
+      """
+      st.markdown(html_str, unsafe_allow_html=True)
+
+      
+  else:
+          st.warning('Please enter your city name')
     
   #Resize and center align image
-  st.write('\n\n\n\n ')
+  st.write(' ')
   st.write(' ')
   left, middle, right = st.columns(3)
-  with left:
+  with right:
+      image_path = "./PoweredByVC-WeatherLogo-RoundedRect.png"
+      image_base64 = get_base64_of_bin_file(image_path)
+      target_url = "http://google.com"
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
-      st.markdown("[![Foo]('./PoweredByVC-WeatherLogo-RoundedRect.png')](https://www.visualcrossing.com/weather-api)")
-      st.markdown("![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png)")
+      st.markdown(f'<a href="{target_url}"><img src="data:image/png;base64,{image_base64}" alt="Link to your image"></a>', unsafe_allow_html=True)
 
-# Call the weather API from visual crossing for the current weather data. 
+
+# Call the weather API from visual crossing for /www.google.com.au/images/nav_logo7.pngthe current weather data. 
 def apiCall(currentCity):
   try:
     api =   f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{currentCity}/today?unitGroup=metric&key=HV4MB4NPS3KVP4YMCVPZYG3QD&contentType=json"
@@ -131,22 +204,11 @@ def getTime(hourlyWeather, currentCity):
   timezone_str = tf.timezone_at(lng=longitude, lat=latitude)
   timezone = pytz.timezone(timezone_str)
   currentTime = datetime.now(timezone).strftime("%H:%M:%S")
+
   for hour in hourlyWeather:
     if hour['datetime'][0:2] == currentTime[0:2]:
       currentIndex = hourlyWeather.index(hour)
   return currentTime, currentIndex
-  
-
-
-# Get the min/max temperature and their time. 
-def getMinMaxTemp(dailyValues, hourlyWeather, currentIndex):  
-  #set maxTemp
-  maxTemp = -100
-  for hour in hourlyWeather[currentIndex:]:
-    if float(hour['temp']) > maxTemp:
-      maxTemp = hour['temp']
-      maxTempIndex = hourlyWeather.index(hour)
-  return(maxTemp, maxTempIndex)
 
 
 # Gather various information from the user which will assist in providing accurate clothing selection. 
@@ -154,7 +216,7 @@ def userPreference():
   # Source for json: https://github.com/samayo/country-json/blob/master/src/country-by-capital-city.json
   # attempt to open json file and load data
     try:
-      countryCityFile = open("countries_and_cities.json")
+      countryCityFile = open("all-countries-and-cities.json")
     except:
       st.warning("Unable to open countries and cities information")
       exit()
@@ -179,11 +241,18 @@ def userPreference():
       yesNo = st.radio(f"(Optional) Are you travelling from another city?", ('No', 'Yes'))
       if yesNo == 'No':
         #if user is in city they've lived in, continue. 
+        currentCity = currentCity.capitalize()
+        
         return currentCity, currentCity
+      
       elif yesNo == 'Yes':
         #if user is in different climate, ask which country. 
           pastCity = st.text_input("Enter Previous City", placeholder='Hit enter to apply')
+          currentCity = currentCity.capitalize()
+          pastCity = pastCity.capitalize()
+
           return currentCity, pastCity
+
     return None, None
 
 
@@ -201,10 +270,10 @@ def weatherCalculation(currentCity, pastCity):
     timezone = pytz.timezone(timezone_str)  
     currentTime = datetime.now(timezone).strftime("%H:%M:%S")
     today = datetime.today().strftime('%Y-%m-%d')
-    six_months_ago = (datetime.today() - timedelta(days=2)).strftime('%Y-%m-%d')
+    thirty_days_ago = (datetime.today() - timedelta(days=30)).strftime('%Y-%m-%d')
     # Call API with each city and time information.
-    pastCityApi = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{pastCity}/{six_months_ago}/{today}?unitGroup=metric&elements=datetime%2Ctemp%2Cfeelslike&include=days&key=HV4MB4NPS3KVP4YMCVPZYG3QD&contentType=json"
-    currentCityApi = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{currentCity}/{six_months_ago}/{today}?unitGroup=metric&elements=datetime%2Ctemp%2Cfeelslike&include=days&key=HV4MB4NPS3KVP4YMCVPZYG3QD&contentType=json"
+    pastCityApi = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{pastCity}/{thirty_days_ago}/{today}?unitGroup=metric&elements=datetime%2Ctemp%2Cfeelslike&include=days&key=HV4MB4NPS3KVP4YMCVPZYG3QD&contentType=json"
+    currentCityApi = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{currentCity}/{thirty_days_ago}/{today}?unitGroup=metric&elements=datetime%2Ctemp%2Cfeelslike&include=days&key=HV4MB4NPS3KVP4YMCVPZYG3QD&contentType=json"
     # Put the API called data into a readable json. 
     pastApiData = requests.get(pastCityApi)
     pastResult = json.loads(pastApiData.text)
@@ -217,6 +286,7 @@ def weatherCalculation(currentCity, pastCity):
     currentCityTemps = currentResult['days']
     n = 0
     temp = 0
+    font_size = "40px"
     #Get the average feels like temp from the calculated amount of time. Divide total temperature by number of days calculated. 
     for day in pastCityTemps:
         temp += int(day['feelslike'])
@@ -228,26 +298,48 @@ def weatherCalculation(currentCity, pastCity):
         temp += int(day['feelslike'])
         n += 1
     currentCityAvgTemp = temp / n
+    
+    avg_temp_past = str(round(pastCityAvgTemp, 1)) + u"\u2103"
+    avg_temp_current = str(round(currentCityAvgTemp, 1)) + u"\u2103"
+
+    st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Temperature for Past 30 Days</h1>", unsafe_allow_html=True)
+
+    left, right = st.columns(2)
+
+    with left:
+      html_str = f"""
+      <span style="font-size: {font_size};">{pastCity} {avg_temp_past}</span>
+      """
+      st.markdown(html_str, unsafe_allow_html=True)
+
+    with right:
+      html_str = f"""
+      <span style="font-size: {font_size};">{currentCity} {avg_temp_current}</span>
+      """
+      st.markdown(html_str, unsafe_allow_html=True)
+
+    st.write('')
+
     # check if it's warmer or colder here, assign temp difference
     # negative value if the current city is colder, 
     # positive value if the current city is warmer
     tempDifference = currentCityAvgTemp - pastCityAvgTemp
     
-    if tempDifference != 0:
-        st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Temperature Difference</h1>", unsafe_allow_html=True)
-        st.write("Average temperature for past 30 days in", pastCity, "is", 
-              str(round(pastCityAvgTemp, 1)) + u"\u2103")
-        st.write("Average temperature for past 30 days in", currentCity, "is",     
-              str(round(currentCityAvgTemp, 1)) + u"\u2103")
-    # Print temperature difference over past month
-        # negative value if the current city is colder, 
-        # positive value if the current city is warmer
-    if currentCityAvgTemp > pastCityAvgTemp:
-          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees warmer than", pastCity, "over the past month.")
-    else:
-          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees colder than", pastCity, "over the past month.")
-      
     return tempDifference
+
+# Get the min/max temperature and their time. 
+def getMinMaxTemp(dailyValues, hourlyWeather, currentIndex):  
+  #set maxTemp
+  maxTemp = -100
+  
+
+  for hour in hourlyWeather[currentIndex:]:
+    if float(hour['temp']) > maxTemp:
+      maxTemp = hour['temp']
+      maxTempIndex = hourlyWeather.index(hour)
+
+  return maxTemp, maxTempIndex 
+
 
 def getAvgTemp(hourlyWeather, currentIndex):
 #Get average temperature and windchill for rest of the day
@@ -257,25 +349,32 @@ def getAvgTemp(hourlyWeather, currentIndex):
         avgTemp += hour['temp'] / (24-currentIndex)
     for hour in hourlyWeather[currentIndex:]:
         avgWindchill += hour['feelslike'] / (24-currentIndex)
+
     return avgTemp, avgWindchill
 
 def getAvgWind(hourlyWeather, currentIndex):
     avgWind = 0
     for hour in hourlyWeather[currentIndex:]:
         avgWind += hour['windspeed'] / (24 - currentIndex)
+
     return avgWind
+
 
 def getAvgDewpoint(hourlyWeather, currentIndex):
     avgDewpoint = 0
     for hour in hourlyWeather[currentIndex:]:
         avgDewpoint += hour['dew'] / (24 - currentIndex)
+
     return avgDewpoint
-  
+
+
+
 # Get precipitation values from API and provide them in a list. 
 def getPrecip(currentIndex, dailyValues, hourlyWeather):
     # check if the precipitation will be less than 1cm 
     # and probability will be less than 10%
     if dailyValues['precip'] < 1 and dailyValues['precipprob'] < 20:
+        st.markdown("<h1 style='font-size:20px;'>There is not predicted to be any precipitation today</h1>", unsafe_allow_html=True)
         return [0], [0]
     # code only runs if above code does not apply.
     precipType = dailyValues['preciptype']
@@ -295,7 +394,7 @@ def getItemTemp(tempDifference, itemType, clothingData, avgTemp):
     list = []
     # check if values 
     for item in clothingData[itemType]:
-        if int(clothingData[itemType][n]['minTemp']) <= avgTemp <= int(clothingData[itemType][n]['maxTemp']):
+        if int(clothingData[itemType][n]['minTemp']) <= avgTemp + tempDifference/2 <= int(clothingData[itemType][n]['maxTemp']):
             min = int(item.get('minTemp'))
             max = int(item.get('maxTemp'))
             list.append(item)
@@ -321,7 +420,7 @@ def getItemDewpoint(itemCategoryList, avgDewpoint):
     # go through all the items, if item is removed, remain at same index
     # to prevent skipping items. 
     while n < len(itemCategoryList):
-        # if item max wind lower than average wind, remove. 
+        # if item max dewpoint lower than average dewpoint, remove. 
         if int(itemCategoryList[n]['maxDewpoint']) <= avgDewpoint:
             itemCategoryList.remove(itemCategoryList[n])
         # move to next 
@@ -343,12 +442,18 @@ def getItemPrecip(itemCategoryList, hourlyPrecipList, hourlyPrecipIndex):
     return itemCategoryList
   
 #locate the best item in each clothing category
-def findBestItem(itemList, avgTemp):
+def findBestItem(itemLists, avgTemp):
   # check if shirts and bottoms are recommended, if not, exit.
   if itemLists[4] == [] and itemLists[7] == []:
       st.warning("The application currently does not support extreme weather conditions")
       return
-  st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Recommendations</h1>", unsafe_allow_html=True)
+  st.write('')
+  st.write('')
+  st.write('')
+  st.write('')
+  st.markdown("<div class='text-container'><span class='text'>Today's Recommendations</span></div>", unsafe_allow_html=True)
+  st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Click each item to check online!</h1>", unsafe_allow_html=True)
+  st.write('')
   for itemList in itemLists:
         bestItemTemp = 100
         bestItem = {}
@@ -364,7 +469,7 @@ def findBestItem(itemList, avgTemp):
             itemURL = f'https://www.google.com/search?tbm=shop&hl=en&psb=1&ved=2ahUKEwi3rIOgwIyAAxXgzsIEHaFCArMQu-kFegQIABAK&q={itemNameURL}&sclient=products-cc'
             st.markdown(
             f'''
-            <a href="{itemURL}" title="{bestItemName}"><button style="background-color:White;">{bestItemName}</button></a>
+            <a href="{itemURL}" title="{bestItemName}"><button style="background-color:white; border-radius:10px;">{bestItemName}</button></a>
             ''',
             unsafe_allow_html=True)
       
