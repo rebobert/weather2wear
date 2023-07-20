@@ -63,7 +63,7 @@ def main():
       st.write('')
       currentTime, currentIndex = getTime(hourlyWeather, currentCity)
       # Do weather calculations 
-      tempDifference = weatherCalculation(currentCity, pastCity)
+      tempDifference, avg_temp_past, avg_temp_current = weatherCalculation(currentCity, pastCity)
       maxTemp, maxTempIndex = getMinMaxTemp(dailyValues, hourlyWeather, currentIndex)
       avgTemp, avgWindchill = getAvgTemp(hourlyWeather, currentIndex)
       avgWind = getAvgWind(hourlyWeather, currentIndex)
@@ -91,6 +91,8 @@ def main():
       font_size = "40px"
       #print title
       st.markdown("<div class='text-container'><span class='text'>Today's Weather</span></div>", unsafe_allow_html=True)
+      
+      #set style
       custom_style = """
       <style>
           h1 {
@@ -99,6 +101,7 @@ def main():
           }
       </style>
       """
+      # print time with style
       st.markdown(custom_style, unsafe_allow_html=True)
     
       st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Current Time is</h1>", unsafe_allow_html=True)
@@ -106,9 +109,25 @@ def main():
       <span style="font-size: {font_size};">{currentTime}</span>
       """
       st.markdown(html_str, unsafe_allow_html=True)
-      st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Weather</h1>", unsafe_allow_html=True)
-      
-      st.write("Current time in", currentCity, "is", currentTime)
+
+      st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Temperature for ## days</h1>", unsafe_allow_html=True)
+
+      left, right = st.columns(2)
+  
+      with left:
+        html_str = f"""
+        <span style="font-size: {font_size};">{pastCity} {avg_temp_past}</span>
+        """
+        st.markdown(html_str, unsafe_allow_html=True)
+  
+      with right:
+        html_str = f"""
+        <span style="font-size: {font_size};">{currentCity} {avg_temp_current}</span>
+        """
+        st.markdown(html_str, unsafe_allow_html=True)
+  
+      st.write('')
+
       st.write("\nHighest Temperature:", str(maxTemp) + u"\u2103" + "  at", str(maxTempIndex) + ":00")
       # Print valuable data for user for the whole day. 
       st.write('Average Temperature:', str(round(avgTemp, 1)) + u"\u2103")
@@ -281,8 +300,13 @@ def weatherCalculation(currentCity, pastCity):
           st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees warmer than", pastCity, "over the past month.")
     else:
           st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees colder than", pastCity, "over the past month.")
-      
-    return tempDifference
+
+    avg_temp_past = str(round(pastCityAvgTemp, 1)) + u"\u2103"
+    avg_temp_current = str(round(currentCityAvgTemp, 1)) + u"\u2103"
+
+    
+
+    return tempDifference, avg_temp_past, avg_temp_current
 
 def getAvgTemp(hourlyWeather, currentIndex):
 #Get average temperature and windchill for rest of the day
