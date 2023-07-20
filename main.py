@@ -99,7 +99,7 @@ def main():
   with left:
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
       st.markdown("[![Foo]('./PoweredByVC-WeatherLogo-RoundedRect.png')](https://www.visualcrossing.com/weather-api)")
-
+      st.markdown(![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png))
 
 # Call the weather API from visual crossing for the current weather data. 
 def apiCall(currentCity):
@@ -295,7 +295,7 @@ def getItemTemp(tempDifference, itemType, clothingData, avgTemp):
     list = []
     # check if values 
     for item in clothingData[itemType]:
-        if int(clothingData[itemType][n]['minTemp']) <= avgTemp + tempDifference/2 <= int(clothingData[itemType][n]['maxTemp']):
+        if int(clothingData[itemType][n]['minTemp']) <= avgTemp <= int(clothingData[itemType][n]['maxTemp']):
             min = int(item.get('minTemp'))
             max = int(item.get('maxTemp'))
             list.append(item)
