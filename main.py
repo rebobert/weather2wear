@@ -98,7 +98,7 @@ def main():
   left, middle, right = st.columns(3)
   with right:
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
-      st.markdown("[![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png)](https://www.visualcrossing.com/weather-api)")
+      st.markdown("[![Foo](PoweredByVC-WeatherLogo-RoundedRect.png)](https://www.visualcrossing.com/weather-api)")
 
 
 # Call the weather API from visual crossing for the current weather data. 
