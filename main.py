@@ -20,6 +20,17 @@ from streamlit_option_menu import option_menu
 itemLists = []
 tempDifference = 0
 
+def get_base64_of_bin_file(bin_file):
+  with open(bin_file, 'rb') as f:
+      data = f.read()
+  return base64.b64encode(data).decode()
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+        
+local_css("style/textStyle.css")
+
 # add background image to main page
 def background(image_file):
     with open(image_file, "rb") as image_file:
@@ -75,7 +86,26 @@ def main():
         
       # once all clothing items have been reduced, find best and print
       findBestItem(itemCategoryList, avgTemp)
-
+      
+      #set font size
+      font_size = "40px"
+      #print title
+      st.markdown("<div class='text-container'><span class='text'>Today's Weather</span></div>", unsafe_allow_html=True)
+      custom_style = """
+      <style>
+          h1 {
+              margin: 0;
+              padding: 0;
+          }
+      </style>
+      """
+      st.markdown(custom_style, unsafe_allow_html=True)
+    
+      st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Current Time is</h1>", unsafe_allow_html=True)
+      html_str = f"""
+      <span style="font-size: {font_size};">{currentTime}</span>
+      """
+      st.markdown(html_str, unsafe_allow_html=True)
       st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Weather</h1>", unsafe_allow_html=True)
       
       st.write("Current time in", currentCity, "is", currentTime)
