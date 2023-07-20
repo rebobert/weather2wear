@@ -136,7 +136,7 @@ def main():
           st.markdown(html_str, unsafe_allow_html=True)
   
       with right:
-          st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>'Average Feels Like'</h1>", unsafe_allow_html=True)
+          st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average 'Feels Like'</h1>", unsafe_allow_html=True)
           html_str = f"""
           <span style="font-size: {font_size};">{avg_windchill}</span>
           """
@@ -159,7 +159,7 @@ def main():
       st.markdown(html_str, unsafe_allow_html=True)
 
       
-  else:
+    else:
           st.warning('Please enter your city name')
     
   #Resize and center align image
