@@ -383,8 +383,12 @@ def findBestItem(itemList, avgTemp):
   if itemLists[4] == [] and itemLists[7] == []:
       st.warning("The application currently does not support extreme weather conditions")
       return
-  st.markdown("<h1 style='font-size:25px; color: #1D375D;'>Today's Recommendations</h1>", unsafe_allow_html=True)
-  for itemList in itemLists:
+  st.write('')
+  st.write('')
+  st.write('')
+  st.markdown("<div class='text-container'><span class='text'>Today's Recommendations</span></div>", unsafe_allow_html=True)
+  st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Click each item to check online!</h1>", unsafe_allow_html=True)
+  st.write('')  for itemList in itemLists:
         bestItemTemp = 100
         bestItem = {}
         for item in itemList:
