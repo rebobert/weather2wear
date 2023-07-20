@@ -126,10 +126,15 @@ def main():
   st.write('\n\n\n\n ')
   st.write(' ')
   left, middle, right = st.columns(3)
-  with left:
+  with right:
+      image_path = "./PoweredByVC-WeatherLogo-RoundedRect.png"
+      image_base64 = get_base64_of_bin_file(image_path)
+      target_url = "http://google.com"
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
-      st.markdown("[![Foo]('./PoweredByVC-WeatherLogo-RoundedRect.png')](https://www.visualcrossing.com/weather-api)")
-      st.markdown("![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png)")
+      st.markdown(f'<a href="{target_url}"><img src="data:image/png;base64,{image_base64}" alt="Link to your image"></a>', unsafe_allow_html=True)
+
+      #st.markdown("[![Foo]('./PoweredByVC-WeatherLogo-RoundedRect.png')](https://www.visualcrossing.com/weather-api)")
+      #st.markdown("![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png)")
 
 # Call the weather API from visual crossing for the current weather data. 
 def apiCall(currentCity):
