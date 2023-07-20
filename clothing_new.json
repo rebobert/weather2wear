@@ -462,7 +462,7 @@
     {
       "name": "Jeans",
       "minTemp": "-30",
-      "maxTemp": "30",
+      "maxTemp": "22",
       "minPrecip": "0",
       "maxPrecip": "6",
       "maxDewpoint": "20",
