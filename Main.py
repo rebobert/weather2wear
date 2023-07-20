@@ -158,6 +158,9 @@ def main():
       """
       st.markdown(html_str, unsafe_allow_html=True)
 
+      #check if precip, if not print to user
+      if hourlyPrecipList = [0] and hourlyPrecipIndex = [0]:
+          st.markdown("<h1 style='font-size:30px;'>There is not predicted to be any precipitation today</h1>", unsafe_allow_html=True)   
       
     else:
           st.warning('Please enter your city name')
@@ -374,7 +377,6 @@ def getPrecip(currentIndex, dailyValues, hourlyWeather):
     # check if the precipitation will be less than 1cm 
     # and probability will be less than 10%
     if dailyValues['precip'] < 1 and dailyValues['precipprob'] < 20:
-        st.markdown("<h1 style='font-size:20px;'>There is not predicted to be any precipitation today</h1>", unsafe_allow_html=True)
         return [0], [0]
     # code only runs if above code does not apply.
     precipType = dailyValues['preciptype']
