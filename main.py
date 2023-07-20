@@ -99,7 +99,7 @@ def main():
   with left:
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
       st.markdown("[![Foo]('./PoweredByVC-WeatherLogo-RoundedRect.png')](https://www.visualcrossing.com/weather-api)")
-      st.markdown(![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png))
+      st.markdown("![Foo](./PoweredByVC-WeatherLogo-RoundedRect.png)")
 
 # Call the weather API from visual crossing for the current weather data. 
 def apiCall(currentCity):
