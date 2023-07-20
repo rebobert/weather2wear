@@ -93,10 +93,10 @@ def main():
       st.warning('Please enter your city name')
     
   #Resize and center align image
-  st.write(' ')
+  st.write('\n\n\n\n ')
   st.write(' ')
   left, middle, right = st.columns(3)
-  with right:
+  with left:
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
       st.markdown("[![Foo](PoweredByVC-WeatherLogo-RoundedRect.png)](https://www.visualcrossing.com/weather-api)")
 
