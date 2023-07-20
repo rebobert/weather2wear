@@ -159,7 +159,7 @@ def main():
       st.markdown(html_str, unsafe_allow_html=True)
 
       #check if precip, if not print to user
-      if hourlyPrecipList = [0] and hourlyPrecipIndex = [0]:
+      if hourlyPrecipList == [0] and hourlyPrecipIndex == [0]:
           st.markdown("<h1 style='font-size:30px;'>There is not predicted to be any precipitation today</h1>", unsafe_allow_html=True)   
       
     else:
