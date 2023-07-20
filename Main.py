@@ -86,7 +86,7 @@ def main():
       findBestItem(itemLists, avgTemp)
       #write title
       st.write('')
-      st.markdown("<div class='text-container'><span class='text'>Today's Weather</span></div>", unsafe_allow_html=True)
+      st.markdown("<div class='text-container'><span class='text'; style= 'color: black;'>Today's Weather</span></div>", unsafe_allow_html=True)
     
       font_size = "40px"
       custom_style = """
@@ -101,7 +101,7 @@ def main():
       
       st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Current Time</h1>", unsafe_allow_html=True)
       html_str = f"""
-      <span style="font-size: {font_size};">{currentTime}</span>
+      <span style="font-size: {font_size}; color: black;">{currentTime}</span>
       """
       st.markdown(html_str, unsafe_allow_html=True)
 
@@ -114,14 +114,14 @@ def main():
       with left:
           st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Max Temperature</h1>", unsafe_allow_html=True)
           html_str = f"""
-          <span style="font-size: {font_size};">{max_temp}</span>
+          <span style="font-size: {font_size}; color: black;">{max_temp}</span>
           """
           st.markdown(html_str, unsafe_allow_html=True)
     
       with right:
           st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Max 'Feels Like'</h1>", unsafe_allow_html=True)
           html_str = f"""
-          <span style="font-size: {font_size};">{max_windchill}</span>
+          <span style="font-size: {font_size}; color: black;">{max_windchill}</span>
           """
           st.markdown(html_str, unsafe_allow_html=True)
       #print avg temp and feels like
@@ -131,14 +131,14 @@ def main():
       with left:
           st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Temperature</h1>", unsafe_allow_html=True)
           html_str = f"""
-          <span style="font-size: {font_size};">{avg_temp}</span>
+          <span style="font-size: {font_size}; color: black;">{avg_temp}</span>
           """
           st.markdown(html_str, unsafe_allow_html=True)
   
       with right:
           st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average 'Feels Like'</h1>", unsafe_allow_html=True)
           html_str = f"""
-          <span style="font-size: {font_size};">{avg_windchill}</span>
+          <span style="font-size: {font_size}; color: black;">{avg_windchill}</span>
           """
           st.markdown(html_str, unsafe_allow_html=True)
       #print wind
@@ -146,7 +146,7 @@ def main():
 
       st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Windspeed</h1>", unsafe_allow_html=True)
       html_str = f"""
-      <span style="font-size: {font_size};">{age_wind}</span>
+      <span style="font-size: {font_size}; color: black;">{age_wind}</span>
       """
       st.markdown(html_str, unsafe_allow_html=True)
 
@@ -154,13 +154,13 @@ def main():
       age_dewpoint = str(round(avgDewpoint, 1)) + u"\u2103"
       st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Average Dewpoint</h1>", unsafe_allow_html=True)
       html_str = f"""
-      <span style="font-size: {font_size};">{age_dewpoint}</span>
+      <span style="font-size: {font_size}; color: black;">{age_dewpoint}</span>
       """
       st.markdown(html_str, unsafe_allow_html=True)
 
       #check if precip, if not print to user
       if hourlyPrecipList == [0] and hourlyPrecipIndex == [0]:
-          st.markdown("<h1 style='font-size:30px;'>There is not predicted to be any precipitation today</h1>", unsafe_allow_html=True)   
+          st.markdown("<h1 style='font-size:30px; color: black;'>There is not predicted to be any precipitation today</h1>", unsafe_allow_html=True)   
       
     else:
           st.warning('Please enter your city name')
@@ -453,7 +453,7 @@ def findBestItem(itemLists, avgTemp):
   st.write('')
   st.write('')
   st.write('')
-  st.markdown("<div class='text-container'><span class='text'>Today's Recommendations</span></div>", unsafe_allow_html=True)
+  st.markdown("<div class='text-container'><span class='text'; style= 'color: black;'>Today's Recommendations</span></div>", unsafe_allow_html=True)
   st.markdown("<h1 style='font-size:20px; text-align:center; color: black;'>Click each item to check online!</h1>", unsafe_allow_html=True)
   st.write('')
   for itemList in itemLists:
