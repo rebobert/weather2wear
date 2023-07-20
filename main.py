@@ -96,8 +96,10 @@ def main():
   st.write(' ')
   st.write(' ')
   left, middle, right = st.columns(3)
-  with middle:
+  with right:
       st.image('./PoweredByVC-WeatherLogo-RoundedRect.png', width=100)
+      st.markdown([![VisualCrossingLogo](./PoweredByVC-WeatherLogo-RoundedRect.png)](https://www.visualcrossing.com/weather-api)
+
 
 # Call the weather API from visual crossing for the current weather data. 
 def apiCall(currentCity):
