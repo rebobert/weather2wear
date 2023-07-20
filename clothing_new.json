@@ -472,7 +472,7 @@
     {
       "name": "Cargo Pants",
       "minTemp": "-10",
-      "maxTemp": "25",
+      "maxTemp": "20",
       "minPrecip": "0",
       "maxPrecip": "6",
       "maxDewpoint": "10",
@@ -482,7 +482,7 @@
     {
       "name": "Joggers Pants",
       "minTemp": "5",
-      "maxTemp": "25",
+      "maxTemp": "21",
       "minPrecip": "0",
       "maxPrecip": "6",
       "maxDewpoint": "16",
