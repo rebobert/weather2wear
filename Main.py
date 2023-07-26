@@ -13,7 +13,7 @@ from streamlit_lottie import st_lottie
 from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
 from streamlit_option_menu import option_menu
-
+from PIL import Image
 
 # declare variables
 itemLists = []
@@ -53,7 +53,9 @@ background('rb.png')
 # main function calls all other functions and collects data
 def main():
   # Print Title Info
-  st.markdown("<h1 style='text-align: center; font-size:100px;'><span style='color: orange;'>&#x2600;</span></h1>", unsafe_allow_html=True)     
+  #st.markdown("<h1 style='text-align: center; font-size:100px;'><span style='color: orange;'>&#x2600;</span></h1>", unsafe_allow_html=True)     
+  image = Image.open('weather2wear.jpg')
+  st.image(image)
   st.markdown("<h1 style='text-align: center; font-size:50px; color: black;'>Weather 2 Wear </h1>", unsafe_allow_html=True)
   st.markdown("<h1 style='text-align: center; font-size:30px; color: black;'>Stay Comfortable, Whatever the Weather</h1>", unsafe_allow_html=True)
   
