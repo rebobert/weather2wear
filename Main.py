@@ -49,8 +49,12 @@ def background(image_file):
     )
 background('rb.png')
 
-#Remove link icon beside each text
-st.markdown("""
+    
+# main function calls all other functions and collects data
+def main():
+
+  #Remove link icon beside each text
+  st.markdown("""
     <style>
     /* Hide the link button */
     .stApp a:first-child {
@@ -60,10 +64,9 @@ st.markdown("""
     .css-eczf16 {display: none}
     .css-jn99sy {display: none}
     </style>
-
     """, unsafe_allow_html=True)
-# main function calls all other functions and collects data
-def main():
+
+  # Print Title Info
   st.markdown("<h1 style='text-align: center; font-size:100px;'><span style='color: orange;'>&#x2600;</span></h1>", unsafe_allow_html=True)     
   st.markdown("<h1 style='text-align: center; font-size:50px; color: black;'>Weather 2 Wear </h1>", unsafe_allow_html=True)
   st.markdown("<h1 style='text-align: center; font-size:30px; color: black;'>Stay Comfortable, Whatever the Weather</h1>", unsafe_allow_html=True)
