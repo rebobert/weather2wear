@@ -49,6 +49,19 @@ def background(image_file):
     )
 background('rb.png')
 
+#Remove link icon beside each text
+st.markdown("""
+    <style>
+    /* Hide the link button */
+    .stApp a:first-child {
+        display: none;
+    }
+    .css-15zrgzn {display: none}
+    .css-eczf16 {display: none}
+    .css-jn99sy {display: none}
+    </style>
+
+    """, unsafe_allow_html=True)
 # main function calls all other functions and collects data
 def main():
   st.markdown("<h1 style='text-align: center; font-size:100px;'><span style='color: orange;'>&#x2600;</span></h1>", unsafe_allow_html=True)     
