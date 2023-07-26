@@ -52,7 +52,7 @@ background('rb.png')
     
 # main function calls all other functions and collects data
 def main():
-
+  """
   #Remove link icon beside each text
   st.markdown("""
     <style>
@@ -65,7 +65,7 @@ def main():
     .css-jn99sy {display: none}
     </style>
     """, unsafe_allow_html=True)
-
+    """
   # Print Title Info
   st.markdown("<h1 style='text-align: center; font-size:100px;'><span style='color: orange;'>&#x2600;</span></h1>", unsafe_allow_html=True)     
   st.markdown("<h1 style='text-align: center; font-size:50px; color: black;'>Weather 2 Wear </h1>", unsafe_allow_html=True)
