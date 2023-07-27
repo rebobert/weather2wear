@@ -53,7 +53,7 @@ background('rb.png')
 # main function calls all other functions and collects data
 def main():
   # Print Title Info
-  '''
+  
   image = Image.open('weather2wear.png')
   col1, col2, col3 = st.columns(3)
   with col1:
@@ -62,7 +62,7 @@ def main():
     st.image(image)
   with col3:
     st.write(' ')
-  '''
+  
   st.markdown("<h1 style='text-align: center; font-size:100px;'><span style='color: orange;'>&#x2600;</span></h1>", unsafe_allow_html=True)   
   st.markdown("<h1 style='text-align: center; font-size:50px; color: black;'>Weather 2 Wear </h1>", unsafe_allow_html=True)
   st.markdown("<h1 style='text-align: center; font-size:30px; color: black;'>Stay Comfortable, Whatever the Weather</h1>", unsafe_allow_html=True)
