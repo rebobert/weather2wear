@@ -333,6 +333,11 @@ def weatherCalculation(currentCity, pastCity):
       """
       st.markdown(html_str, unsafe_allow_html=True)
 
+    if currentCityAvgTemp > pastCityAvgTemp:
+          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees warmer than", pastCity, "over the past month.")
+    else:
+          st.write(currentCity, "is", str(abs(round(tempDifference, 1))), "degrees colder than", pastCity, "over the past month.")
+
     st.write('')
 
     # check if it's warmer or colder here, assign temp difference
