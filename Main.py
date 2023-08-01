@@ -212,7 +212,7 @@ def apiCall(currentCity):
 def getTime(hourlyWeather, currentCity):
   #timezone = pytz.timezone('America/Edmonton')
   
-  geolocator = Photon(user_agent='myGeocoder')
+  geolocator = Photon(user_agent='weather2wear')
   location = geolocator.geocode(currentCity)
   tf = TimezoneFinder()
   latitude, longitude = location.latitude, location.longitude
@@ -277,7 +277,7 @@ def weatherCalculation(currentCity, pastCity):
     if currentCity == pastCity:
         tempDifference = 0
         return tempDifference
-    geolocator = Photon(user_agent='myGeocoder')
+    geolocator = Photon(user_agent='weather2wear')
     location = geolocator.geocode(currentCity)
     tf = TimezoneFinder()
     latitude, longitude = location.latitude, location.longitude
