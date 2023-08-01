@@ -10,7 +10,7 @@ import pytz
 import base64
 from datetime import timedelta, datetime
 from streamlit_lottie import st_lottie
-from geopy.geocoders import Nominatim
+from geopy.geocoders import Photon
 from timezonefinder import TimezoneFinder
 from streamlit_option_menu import option_menu
 from PIL import Image
@@ -212,7 +212,7 @@ def apiCall(currentCity):
 def getTime(hourlyWeather, currentCity):
   #timezone = pytz.timezone('America/Edmonton')
   
-  geolocator = Nominatim(user_agent='myGeocoder')
+  geolocator = Photon(user_agent='myGeocoder')
   location = geolocator.geocode(currentCity)
   tf = TimezoneFinder()
   latitude, longitude = location.latitude, location.longitude
@@ -277,7 +277,7 @@ def weatherCalculation(currentCity, pastCity):
     if currentCity == pastCity:
         tempDifference = 0
         return tempDifference
-    geolocator = Nominatim(user_agent='myGeocoder')
+    geolocator = Photon(user_agent='myGeocoder')
     location = geolocator.geocode(currentCity)
     tf = TimezoneFinder()
     latitude, longitude = location.latitude, location.longitude
