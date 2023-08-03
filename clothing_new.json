@@ -42,16 +42,6 @@
       "material":  [ "Cotton" ]
     },
     {
-      "name": "Headband Athletic",
-      "minTemp": "0",
-      "maxTemp": "15",
-      "minPrecip": "0",
-      "maxPrecip": "3",
-      "maxDewpoint": "21",
-      "maxWind": "50",
-      "material": [ "Polyester" ]
-     },
-     {
       "name": "Winter Headband",
       "minTemp": "-15",
       "maxTemp": "5",
