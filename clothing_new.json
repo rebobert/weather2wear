@@ -528,7 +528,7 @@
       "minTemp": "-5",
       "maxTemp": "35",
       "minPrecip": "0",
-      "maxPrecip": "3",
+      "maxPrecip": "8",
       "maxDewpoint": "40",
       "maxWind": "70",
       "material": [ "Nylon Mesh" ]
