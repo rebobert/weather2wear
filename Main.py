@@ -404,7 +404,7 @@ def getItemTemp(tempDifference, itemType, clothingData, avgTemp):
     list = []
     # check if values 
     for item in clothingData[itemType]:
-        if int(clothingData[itemType][n]['minTemp']) <= avgTemp + tempDifference/2 <= int(clothingData[itemType][n]['maxTemp']):
+        if int(clothingData[itemType][n]['minTemp']) <= avgTemp <= int(clothingData[itemType][n]['maxTemp']):
             min = int(item.get('minTemp'))
             max = int(item.get('maxTemp'))
             list.append(item)
