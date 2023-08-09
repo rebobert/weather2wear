@@ -115,7 +115,7 @@
       "maxTemp": "0",
       "minPrecip": "0",
       "maxPrecip": "3",
-      "maxDewpoint": "10",
+      "maxDewpoint": "16",
       "maxWind": "60",
       "material": [ "Polyester" ]
     }
@@ -149,7 +149,7 @@
       "maxTemp": "-5",
       "minPrecip": "0",
       "maxPrecip": "8",
-      "maxDewpoint": "10",
+      "maxDewpoint": "16",
       "maxWind": "75",
       "material": [ "Wool" ]
     },
@@ -210,7 +210,7 @@
     {
       "name": "Polo Tee Shirt",
       "minTemp": "-25",
-      "maxTemp": "25",
+      "maxTemp": "20",
       "minPrecip": "0",
       "maxPrecip": "8",
       "maxDewpoint": "20",
@@ -222,8 +222,8 @@
       "minTemp": "5",
       "maxTemp": "15",
       "minPrecip": "0",
-      "maxPrecip": "4",
-      "maxDewpoint": "16",
+      "maxPrecip": "8",
+      "maxDewpoint": "20",
       "maxWind": "40",
       "material": [ "Cotton" ]
     },
