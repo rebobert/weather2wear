@@ -345,10 +345,10 @@
       "name": "Raincoat",
       "minTemp": "5",
       "maxTemp": "30",
-      "minPrecip": "2",
+      "minPrecip": "1",
       "maxPrecip": "10",
-      "maxDewpoint": "16",
-      "maxWind": "60",
+      "maxDewpoint": "25",
+      "maxWind": "80",
       "material": [ "Polyester" ]
     },
     {
