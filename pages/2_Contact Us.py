@@ -28,7 +28,7 @@ st.title("Contact")
 st.header(":mailbox: Get In Touch With Us!")
 
 contact_form = """
-<form action="https://formsubmit.co/enteremail@email.ca" method="POST">
+<form action="https://formsubmit.co/seijinoh90@gmail.com" method="POST">
     <input type="hidden" name="_cc" value="email@email.com,yetanother@email.com">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email" required>
